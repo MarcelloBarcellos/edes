@@ -3,12 +3,13 @@ import java.util.ArrayList;
 public class jogador {
 	private String nome;
 	private int idade;
-	private ArrayList<equipe>equipe;
+	private ArrayList<equipe> equipes;
 	
-	public jogador(String nome, int idade) {
-		this.nome = nome;
-		this.idade = idade;
-		this.equipe = new ArrayList<equipe>();
+	public ArrayList<equipe> getEquipes() {
+		return equipes;
+	}
+	public void setEquipes(ArrayList<equipe> equipes) {
+		this.equipes = equipes;
 	}
 	public String getNome() {
 		return nome;
@@ -22,13 +23,7 @@ public class jogador {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-	public ArrayList<equipe> getEquipe() {
-		return equipe;
-	}
-	public void setEquipe(ArrayList<equipe> equipe) {
-		this.equipe = equipe;
-	}
-	public void addEquipe(equipe equipe) {
-		equipe.add(equipe);
+	public void addEquipe(equipe equipe) { 
+		equipes.add(equipe);
 	}
 }

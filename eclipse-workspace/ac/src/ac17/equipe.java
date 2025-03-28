@@ -1,20 +1,20 @@
 package ac17;
 import java.util.ArrayList;
 public class equipe {
-	private String nome;
+	private String nomeEquipe;
 	private String cor;
-	private ArrayList<jogador>jogador;
+	private ArrayList<jogador> jogadores;
 	
-	public equipe(String nome, String cor) {
-		this.nome = nome;
+	public equipe(String nomeEquipe, String cor) {
+		this.nomeEquipe = nomeEquipe;
 		this.cor = cor;
-		this.jogador = new ArrayList<jogador>();
+		this.jogadores = new ArrayList<jogador>()
+;	}
+	public String getNomeEquipe() {
+		return nomeEquipe;
 	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeEquipe(String nomeEquipe) {
+		this.nomeEquipe = nomeEquipe;
 	}
 	public String getCor() {
 		return cor;
@@ -22,14 +22,14 @@ public class equipe {
 	public void setCor(String cor) {
 		this.cor = cor;
 	}
-	public ArrayList<jogador> getJogador() {
-		return jogador;
+	public ArrayList<jogador> getJogadores() {
+		return jogadores;
 	}
-	public void setJogador(ArrayList<jogador> jogador) {
-		this.jogador = jogador;
+	public void setJogadores(ArrayList<jogador> jogadores) {
+		this.jogadores = jogadores;
 	}
 	public void addJogador(jogador jogador) {
-		jogador.add(jogador);
+		jogadores.add(jogador);
 		jogador.addEquipe(this);
 	}
 }
